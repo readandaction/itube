@@ -2,13 +2,15 @@
   "name": "itube",
   "version": "1.0.0",
   "description": "Challenge work",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js"
   },
   "author": "Chanjong",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "express": "^4.17.1"
   }
 }

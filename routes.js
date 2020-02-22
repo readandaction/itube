@@ -1,16 +1,19 @@
 // global
 const HOME = "/",
+  JOIN = "/join",
   LOGIN = "/login",
-  JOIN = "/join";
+  LOGOUT = "/logout",
+  SEARCH = "/search";
+
 // USERS
 const USERS = "/users",
-  USER_ID = "/:id",
-  EDIT_PROFILE = "/:id/edit-profile",
-  UPLOAD = "/:id/upload",
-  LOGOUT = "/:id/logout";
+  USER_DETAIL = "/:id",
+  EDIT_PROFILE = "/edit-profile",
+  CHANGE_PASSWORD = "/change-password";
 // VIDEO
 const VIDEOS = "/videos",
-  VIDEO_ID = "/:id",
+  UPLOAD = "/upload",
+  VIDEO_DETAIL = "/:id",
   EDIT_VIDEO = "/:id/edit-video",
   DELETE_VIDEO = "/:id/delete-video";
 
@@ -19,15 +22,17 @@ const routes = {
   home: HOME,
   login: LOGIN,
   join: JOIN,
+  logout: LOGOUT,
+  search: SEARCH,
   //USERS
   users: USERS,
-  userId: USER_ID,
+  userDetail: USER_DETAIL,
   editProfile: EDIT_PROFILE,
-  upload: UPLOAD,
-  logout: LOGOUT,
-  //VIDEO
+  changePassword: CHANGE_PASSWORD,
+  //VIDEOs
   videos: VIDEOS,
-  videoId: VIDEO_ID,
+  upload: UPLOAD,
+  videoDetail: VIDEO_DETAIL,
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO
 };

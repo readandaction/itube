@@ -9,6 +9,8 @@ export const postJoin = (req, res) => {
   } = req;
   // console.log(req.body);
   if (password === password2) {
+    // To do : resister user
+    // log user in
     res.redirect(routes.home);
   } else {
     res.render("join", { pagetitle: "join" });
@@ -17,8 +19,15 @@ export const postJoin = (req, res) => {
 
 export const getLogin = (req, res) =>
   res.render("login", { pagetitle: "login" });
-export const postLogin = (req, res) =>
+
+export const postLogin = (req, res) => {
+  const {
+    body: { email, password }
+  } = req;
+  // To Do : Log user in
+  // Authenticate user
   res.render("login", { pagetitle: "login" });
+};
 
 export const logout = (req, res) =>
   res.render("logout", { pagetitle: "logout" });

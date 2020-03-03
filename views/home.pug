@@ -1,4 +1,8 @@
 extends layouts/main
 
 block content
-    h1=pageTitle
+    .video-container
+        each Video in Videos
+            video(src=Video.videoFile)
+            h1=Video.title
+            p=Video.description    

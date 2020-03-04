@@ -5,6 +5,7 @@ block content
     .video-container
         each video in videos
             +videoBlock({
+                id:video.id,
                 videoFile:video.videoFile,
                 title:video.title,
                 description:video.description

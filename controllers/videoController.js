@@ -7,12 +7,20 @@ export const search = (req, res) => {
   const {
     query: { term: searchingBy }
   } = req;
-  // console.log(req.query.term);
   res.render("search", { pageTitle: "search", searchingBy, videos });
 };
 
-export const upload = (req, res) =>
-  res.render("upload", { pageTitle: "upload" });
+export const getUpload = (req, res) => {
+  res.render("upload", { pagetitle: "upload" });
+};
+export const postUpload = (req, res) => {
+  const {
+    body: { file, title, description }
+  } = req;
+  //To Do: Post video
+  console.log(file, title, description);
+  res.redirect(routes.home);
+};
 export const videoDetail = (req, res) =>
   res.render("videoDetail", { pageTitle: "videoDetail" });
 export const editVideo = (req, res) =>

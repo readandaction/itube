@@ -3,7 +3,7 @@ include mixins/videoBlock
 
 block content
     .video-container
-        each video in Videos
+        each video in videos
             +videoBlock({
                 videoFile:video.videoFile,
                 title:video.title,

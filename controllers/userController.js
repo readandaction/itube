@@ -35,6 +35,6 @@ export const logout = (req, res) =>
   res.render("logout", { pagetitle: "logout" });
 export const users = (req, res) => res.render("users", { pagetitle: "users" });
 export const userDetail = (req, res) =>
-  res.render("userId", { pagetitle: "userDetail" });
+  res.render("userDetail", { pagetitle: "userDetail" });
 export const changePassword = (req, res) =>
   res.render("changePassword", { pagetitle: "changePassword" });

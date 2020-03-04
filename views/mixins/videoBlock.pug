@@ -1,4 +1,4 @@
 mixin videoBlock(video={})
-    video(src=video.videoFile)
-    h1=video.title
-    p=video.description
+    video.videoBlock__thumnail(src=video.videoFile, autoplay="autoplay", muted="muted", controls=true)
+    h1.videoBlock__title=video.title
+    p.videoBlock__description=video.description

@@ -26,7 +26,13 @@ const routes = {
   search: SEARCH,
   //USERS
   users: USERS,
-  userDetail: USER_DETAIL,
+  userDetail: id => {
+    if (id) {
+      return `/${id}`;
+    } else {
+      return USER_DETAIL;
+    }
+  },
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
   //VIDEOs

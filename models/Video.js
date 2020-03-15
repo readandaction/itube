@@ -1,29 +1,35 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const VideoSchema = new mongoose.Schema({
-    fileUrl:{
-        type: String,
-        required:"File is required"
-    },
-    title:{
-        type:String,
-        required:required
-    },
-    description: String
-    author:{
-        type:String,
-        required:required
-    },
-    createAt:{
-        type:Date,
-        default:Date.now
-    },
-    views:{
-        type:Number,
-        default:0
+  fileUrl: {
+    type: String,
+    required: "File is required"
+  },
+  title: {
+    type: String,
+    required: required
+  },
+  description: String,
+  author: {
+    type: String,
+    required: required
+  },
+  createAt: {
+    type: Date,
+    default: Date.now
+  },
+  views: {
+    type: Number,
+    default: 0
+  },
+  comment: [
+    {
+      type: mongoose.Schema.type.ObjectId,
+      ref: "Comment"
     }
-})
+  ]
+});
 
-const model = mongoose.model("Video",VideoSchema);
+const model = mongoose.model("Video", VideoSchema);
 
 export default model;
